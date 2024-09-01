@@ -1,0 +1,14 @@
+version: "3"
+services:
+    postgres:
+        image: postgres:latest
+        container_name: bd
+        restart: always
+        expose:
+          - 5432
+        ports:
+          - 5432:5432
+        environment:
+          - POSTGRES_PASSWORD=docker
+          - POSTGRES_USER=docker
+          - POSTGRES_DB=newsletter
