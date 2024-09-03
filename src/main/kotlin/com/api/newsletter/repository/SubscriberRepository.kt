@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository
 interface SubscriberRepository: JpaRepository<Subscriber, Long> {
     fun findByEmail(email: String): Subscriber?
     fun deleteByEmail(email: String): Int
+    fun findByIsActiveTrue(): List<Subscriber>
 }
