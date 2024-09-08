@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "f91a61f1-c67e-4918-bcc3-1a3a298d7336",
+		"name": "NewsletterApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addSubscriber",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Lander Doe\",\n  \"email\": \"landerdoe@gmail.com\",\n  \"isActive\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/subscriber",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscriber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllSubscribers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/subscriber",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscriber"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSubscriberByEmail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/subscriber/findByEmail/landerdoe@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscriber",
+						"findByEmail",
+						"landerdoe@gmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addNewsletter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"This newsletter is a test\",\n    \"content\": \"The greatest test ever made!\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/newsletter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"newsletter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllNewsletter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/newsletter",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"newsletter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sendEmail",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/newsletter/send/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"newsletter",
+						"send",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
